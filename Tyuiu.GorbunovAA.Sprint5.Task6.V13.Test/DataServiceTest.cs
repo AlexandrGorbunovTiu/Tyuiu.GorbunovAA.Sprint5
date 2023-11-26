@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.IO;
 
 namespace Tyuiu.GorbunovAA.Sprint5.Task6.V13.Test
 {
@@ -9,6 +10,11 @@ namespace Tyuiu.GorbunovAA.Sprint5.Task6.V13.Test
         [TestMethod]
         public void ValidExpression()
         {
+            string path = @"C:\DataSprint5\InPutDataFileTask6V13.txt";
+            FileInfo fileInfo = new FileInfo(path);
+            bool fileExists = fileInfo.Exists;
+            bool wait = true;
+            Assert.AreEqual(wait, fileExists);
         }
     }
 }
